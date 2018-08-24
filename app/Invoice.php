@@ -28,9 +28,10 @@ class Invoice extends Model
 
     }
 
-    public function item(){
+    public function items(){
 
-        return  $this->belongsToMany(InvoiceItem::class);
+        return  $this->HasMany(InvoiceItem::class);
+        
 
     }
     public function setSubTotalAttribute($value)
